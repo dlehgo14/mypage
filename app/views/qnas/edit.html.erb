@@ -1,0 +1,15 @@
+<% if current_user != @qna.user %>
+	<p>권한이 없습니다.</p>
+	<a href = '/'>되돌아가기</a>
+<%else%>
+
+<h1>질문 수정하기</h1>
+<%= form_tag qna_path, method: :PATCH, multipart: true do %>
+	제목 : <input type="text" name="title" value=<%=@qna.title%>><br>
+	내용 : <%=text_area_tag :content, @qna.content %><br>
+	<%= button_tag "수정하기", :data => {:confirm => "수정하시겠습니까?"} %>
+<% end %>
+
+
+
+<%end%>

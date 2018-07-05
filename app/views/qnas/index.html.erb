@@ -1,0 +1,16 @@
+<h1>QnA</h1>
+<h2>Ask Me Anything</h2>
+<strong><a href='/qnas/new'>질문하기</a></strong>
+
+<table style="width:100%">
+  <tr>
+    <th>작성자</th>
+    <th>제목</th> 
+  </tr>
+	<% @qna.each do |x| %>
+	  <tr  align="center">
+			<td><%=x.user.email%></td>
+			<td><a href='/qnas/<%=x.id%>'><%=x.title%></a></td> 
+		</tr>
+	<%end%>
+</table>

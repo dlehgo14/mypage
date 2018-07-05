@@ -1,0 +1,8 @@
+<h1>질문하기</h1>
+<p>아래 칸을 작성해주세요.</p>
+
+<%= form_tag qnas_path, multipart: true do %>
+	제목 : <input type="text" name="title"><br>
+	내용 : <%=text_area_tag :content, nil, placeholder: "무엇이 궁금한가요?" %><br>
+	<%= button_tag "작성하기", :data => {:confirm => "글을 올리시겠습니까?"} %>
+<% end %>
