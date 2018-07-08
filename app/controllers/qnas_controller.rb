@@ -25,10 +25,12 @@ class QnasController < ApplicationController
 	end
 	
   def edit
+		authorize_action_for @qna
 		@qna = Qna.find(params[:id])
   end
 	
 	def update
+		authorize_action_for @qna
 		@qna = Qna.find(params[:id])
 		@qna.title = params[:title]
 		@qna.content = params[:content]
@@ -37,6 +39,7 @@ class QnasController < ApplicationController
 	end
 	
 	def destroy
+		authorize_action_for @qna
 		@qna = Qna.find(params[:id])
 		@qna.delete
 		redirect_to "/qnas", notice: "삭제 완료"

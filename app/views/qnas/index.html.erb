@@ -4,12 +4,12 @@
 
 <table style="width:100%">
   <tr>
-    <th>작성자</th>
+    <th style="width:30%">작성자</th>
     <th>제목</th> 
   </tr>
 	<% @qna.each do |x| %>
 	  <tr  align="center">
-			<td><%=x.user.email%></td>
+			<td style="width:30%"><%=x.user.email%></td>
 			<td><a href='/qnas/<%=x.id%>'><%=x.title%></a></td> 
 		</tr>
 	<%end%>

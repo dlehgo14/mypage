@@ -2,7 +2,8 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
-
+	
+	<!-- 이메일 -->
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -11,6 +12,33 @@
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
+
+	<!-- 이름 -->
+	<div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :input_html => { :value => current_user.name }, autofocus: true, autocomplete: "off" %>
+  </div>
+	
+	<!-- 별명 -->
+	<div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname, :input_html => { :value => current_user.nickname }, autofocus: true, autocomplete: "off" %>
+  </div>
+	
+	<!-- 핸드폰 -->
+	<div class="field">
+    <%= f.label :phone, "phone number" %><br />
+    <%= f.text_field :phone, :input_html => { :value => current_user.phone }, autofocus: true, autocomplete: "off" %>
+  </div>
+	
+	<!-- 성별 -->
+	<div class="field">
+    <%= f.label :sex %><br />
+		<%= f.radio_button :isMale, true %> 
+		<%= f.label :isMale, 'Male', :value => true %>
+		<%= f.radio_button :isMale, false %>
+		<%= f.label :isMale, 'Female', :value => false %>
+  </div>
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />

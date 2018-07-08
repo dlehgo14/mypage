@@ -2,5 +2,23 @@
 
 <h2>Where do you wanna go?</h2>
 <ul>
-	<li><a href = '/qnas'>go to QnA</a></li>
+	<li>
+		<button id="qna" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+		Q&A</button>
+		<a href='/qnas'>ss</a>
+	</li>
 </ul>
+
+<p class="brand-logo">ff</p>
+
+
+<script>
+	// Function to change the content of t2
+	function goQna() {
+		window.location.href = "/qnas";
+	}
+
+	// add event listener to table
+	var el = document.getElementById("qna");
+	el.addEventListener("click", goQna, false);
+</script>

@@ -24,7 +24,10 @@
 		<% @comments.each do |x| %>
 			<tr>
 				<td style="width:30%"><%=x.user.email%></td>
-				<td><%=x.content%></td>
+				<td><%=x.content%>&emsp;
+				<% if current_user == x.user %>
+					<a href = '/qnas/<%=@qna.id%>/qna_comments/<%=x.id%>' data-confirm = '댓글을 삭제하시겠습니까?' data-method = 'delete'>삭제</a>
+				<%end%></td>
 			</tr>
 		<%end%>
 	</table>
