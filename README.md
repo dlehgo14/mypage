@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+spec model
+
+bench:integer
+dead:integer
+squat:integer
+military:integer
+
+tall:float
+weight:float
+fat:float

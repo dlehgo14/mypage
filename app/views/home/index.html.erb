@@ -5,11 +5,12 @@
 	<li>
 		<button id="qna" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 		Q&A</button>
-		<a href='/qnas'>ss</a>
+		<button id="cafe" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+		Cafe</button>
 	</li>
 </ul>
 
-<p class="brand-logo">ff</p>
+<img src='/background_cat.gif'></img>
 
 
 <script>
@@ -18,7 +19,13 @@
 		window.location.href = "/qnas";
 	}
 
+	function goCafe() {
+		window.location.href = "/cafes";
+	}
 	// add event listener to table
 	var el = document.getElementById("qna");
 	el.addEventListener("click", goQna, false);
+	
+	var e2 = document.getElementById("cafe");
+	e2.addEventListener("click", goCafe, false);
 </script>

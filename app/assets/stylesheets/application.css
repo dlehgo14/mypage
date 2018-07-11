@@ -24,3 +24,7 @@
   overflow: visible;
   background-color: white;
 }
+
+.center {
+	text-align: center;
+}

@@ -10,6 +10,8 @@ gem 'devise'
 gem 'rolify'
 gem 'authority'
 
+#gmaps
+gem 'gmaps4rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
